@@ -5,8 +5,6 @@
 /.pnp
 .pnp.js
 
-/.secret
-
 # testing
 /coverage
 
@@ -71,4 +69,3 @@ typechain-types
 #Hardhat files
 cache
 artifacts
-
