@@ -48,7 +48,8 @@ contract NFTMarket is ReentrancyGuard {
     address nftContract,
     uint256 tokenId,
     uint256 price
-  ) public payable nonReentrant {
     
+  ) public payable nonReentrant {
+
   }
 }
