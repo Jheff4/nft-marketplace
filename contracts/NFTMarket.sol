@@ -91,8 +91,9 @@ contract NFTMarket is ReentrancyGuard {
 
     // send the money to the seller
     idToMarketItem[itemId].seller.transferFrom(msg.value);
-    // transferring ownership from the contract to the buyer
+    // transferring ownership of the NFT from the contract to the buyer
     IERC721(nftContract).transferFrom(address(this), msg.sender, tokenId);
+    // setting the owner of the NFT to msg.sender
     idToMarketItem[itemId].owner = payable(msg.sender);
     
   }
