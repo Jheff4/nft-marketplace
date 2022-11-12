@@ -108,7 +108,7 @@ contract NFTMarket is ReentrancyGuard {
 
     MarketItem[] memory items = new MarketItem[](unsoldItemCount);
     for (uint i = 0; i < itemCount; i++) {
-      if (idToMarketItem[i + 1].owner == address(0)) {
+      if (idToMarketItem[].owner == address(0)) {
 
       }
     }
