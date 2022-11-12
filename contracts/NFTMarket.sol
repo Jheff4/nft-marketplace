@@ -96,13 +96,16 @@ contract NFTMarket is ReentrancyGuard {
     // setting the owner of the NFT to msg.sender
     idToMarketItem[itemId].owner = payable(msg.sender);
     idToMarketItem[itemId].sold = true;
-    _itemSold.increment();
+    _itemsSold.increment();
     // pay the owner of the contract
     payable(owner).transfer(listingPrice);
   }
 
   function fetchMarketItems() public view returns (MarketItem[] memory) {
     uint itemCount = _itemIds.current();
+    uint unsoldItemCount = _itemIds.current() - _itemsSold.current();
+    uint currentIndex = 0;
+
     
   }
 }
